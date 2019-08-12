@@ -58,10 +58,17 @@
         }
 
         //3: 校验邮箱
-        // function checkEmail() {
-        //     var email = $("#email").val();
-        //     var reg_email=//;
-        // }
+        function checkEmail() {
+            var email = $("#email").val();
+            var reg_email = /^\w+@\w+\.\w+$/;
+            var flag = reg_email.test(email);
+            if (flag) {
+                $("#email").css("border", "");
+            } else {
+                $("#email").css("border", "1px solid red");
+            }
+            return flag;
+        }
 
 
         /**
@@ -77,6 +84,7 @@
         $(function () {
             $("#username").blur(checkUsername);
             $("#username").blur(checkPassword);
+            $("#email").blur(checkEmail);
 
             $("#registerForm").submit(function () {
                 return checkUsername();
