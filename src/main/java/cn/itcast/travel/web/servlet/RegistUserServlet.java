@@ -34,7 +34,7 @@ public class RegistUserServlet extends HttpServlet {
         String checkcode_server = (String) session.getAttribute("CHECKCODE_SERVER");
         session.removeAttribute("CHECKCODE_SERVER");//为了保证验证码只能使用一次
         //比较
-        if(checkcode_server == null || !checkcode_server.equalsIgnoreCase(check)){
+        if (checkcode_server == null || !checkcode_server.equalsIgnoreCase(check)) {
             //验证码错误
             ResultInfo info = new ResultInfo();
             //注册失败
@@ -49,15 +49,10 @@ public class RegistUserServlet extends HttpServlet {
         }
 
 
-
-
-
-
-
-        //1:获取数据
+        //Todo 1:获取数据
         Map<String, String[]> parameterMap = request.getParameterMap();
 
-        //2:封装对象
+        //Todo 2:封装对象
         User user = new User();
         try {
             //将parameterMap的值对应的封装到user的属性里面去
@@ -68,12 +63,12 @@ public class RegistUserServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        //3:调用service完成注册
+        //Todo 3:调用service完成注册
         UserService userService = new UserServiceImpl();
         Boolean flag = userService.regist(user);
         System.out.println("注册:" + (flag ? "成功" : "失败"));
 
-        //4:响应结果
+        //Todo 4:响应结果
         ResultInfo resultInfo = new ResultInfo();
         if (flag) {
             resultInfo.setFlag(flag);
@@ -91,5 +86,6 @@ public class RegistUserServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.doPost(request, response);//注释掉了  执行不到这里
     }
 }

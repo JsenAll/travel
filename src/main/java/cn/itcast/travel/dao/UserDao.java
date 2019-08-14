@@ -18,7 +18,10 @@ public interface UserDao {
     public void save(User user);
 
     User findByCode(String code);
-
+    /**
+     * 修改指定用户激活状态
+     * @param user
+     */
     void updateStatus(User user);
 
     User findByUsernameAndPassword(String username, String password);
