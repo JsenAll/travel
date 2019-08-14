@@ -22,4 +22,6 @@ public interface UserService {
      * @return
      */
     boolean active(String code);
+
+    User login(User user);
 }
