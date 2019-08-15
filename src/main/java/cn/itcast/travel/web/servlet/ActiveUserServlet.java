@@ -40,6 +40,6 @@ public class ActiveUserServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doPost(request, response);//注释掉了  执行不到这里
+        this.doPost(request, response);//注释掉了  就找不到这servlet
     }
 }
