@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
-/**
+/**已经整合到UserServlet中去
  * Servlet调用service
  * service调用dao
  */

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
+/**已经整合到UserServlet中去
  * 激活的servlet
  */
 @WebServlet("/activeUserServlet")

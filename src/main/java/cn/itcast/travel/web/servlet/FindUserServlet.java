@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-/**
+/** 已经整合到UserServlet中去
  *将登陆后的用户  对应的用户名输出到页面中
  */
 @WebServlet("/findUserServlet")

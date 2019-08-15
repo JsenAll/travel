@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
-/**
+/**已经整合到UserServlet中去
  * 登陆
  */
 @WebServlet("/loginServlet")

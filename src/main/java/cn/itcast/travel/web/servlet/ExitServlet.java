@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
+/**已经整合到UserServlet中去
  * 用户退出  清除Session中user 属性 返回到登陆页面
  */
 @WebServlet("/exitServlet")
