@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class CategoryServiceImpl implements CategoryService {
+public class  CategoryServiceImpl implements CategoryService {
     private CategoryDao categoryDao = new CategoryDaoImpl();
 
 
